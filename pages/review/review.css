@@ -145,7 +145,7 @@
 }
 
 .btn-bar-primary {
-    background: var(--military-green);
+    background: var(--dark-green);
     border: none;
     color: white;
     border-radius: 8px;

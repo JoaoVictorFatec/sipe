@@ -67,15 +67,15 @@
 }
 
 .planning-card.approved::before {
-    background: var(--status-approved-text);
+    background: var(--green);
 }
 
 .planning-card.pending::before {
-    background: var(--status-pending-text);
+    background: var(--amber);
 }
 
 .planning-card.rejected::before {
-    background: var(--status-rejected-text);
+    background: var(--dark-red);
 }
 
 .planning-card:hover {
@@ -156,21 +156,21 @@
 }
 
 .status-badge.approved {
-    border: 1px solid var(--status-approved-border);
-    background: var(--status-approved-bg);
-    color: var(--status-approved-text);
+    border: 1px solid var(--green-border);
+    background: var(--light-green);
+    color: var(--green);
 }
 
 .status-badge.pending {
-    border: 1px solid var(--status-pending-border);
-    background: var(--status-pending-bg);
-    color: var(--status-pending-text);
+    border: 1px solid var(--yellow);
+    background: var(--light-yellow);
+    color: var(--amber);
 }
 
 .status-badge.rejected {
-    border: 1px solid var(--status-rejected-border);
-    background: var(--status-rejected-bg);
-    color: var(--status-rejected-text);
+    border: 1px solid var(--red-border);
+    background: var(--light-red);
+    color: var(--dark-red);
 }
 
 
@@ -216,7 +216,7 @@
 }
 
 .button-danger {
-    background: var(--alert);
+    background: var(--red);
     color: var(--white);
 }
 
@@ -230,7 +230,7 @@
 }
 
 .button-green:hover {
-    background: var(--military-green);
+    background: var(--dark-green);
 }
 
 .button-ghost {
@@ -290,21 +290,21 @@
 }
 
 .timeline-dot.done {
-    border: 2px solid var(--status-approved-border);
+    border: 2px solid var(--green-border);
     background: var(--light-green);
     color: var(--green);
 }
 
 .timeline-dot.pending {
-    border: 2px solid var(--status-pending-border);
-    background: var(--status-pending-bg);
-    color: var(--status-pending-text);
+    border: 2px solid var(--yellow);
+    background: var(--light-yellow);
+    color: var(--amber);
 }
 
 .timeline-dot.rejected {
-    border: 2px solid var(--status-rejected-border);
-    background: var(--status-rejected-bg);
-    color: var(--status-rejected-text);
+    border: 2px solid var(--red-border);
+    background: var(--light-red);
+    color: var(--dark-red);
 }
 
 .timeline-dot.upcoming {
@@ -532,7 +532,7 @@
 }
 
 .coordination-approve {
-    border: 1px solid var(--status-approved-border);
+    border: 1px solid var(--green-border);
     background: var(--light-green);
     color: var(--green);
 }
@@ -542,7 +542,7 @@
 }
 
 .coordination-adjust {
-    border: 1px solid var(--warning);
+    border: 1px solid var(--yellow);
     background: var(--light-yellow);
     color: var(--amber);
 }
@@ -552,7 +552,7 @@
 }
 
 .coordination-reject {
-    border: 1px solid var(--status-rejected-border);
+    border: 1px solid var(--red-border);
     background: var(--light-red);
     color: var(--dark-red);
 }
@@ -674,7 +674,7 @@
 }
 
 .flow-step-item.done {
-    color: var(--status-approved-border);
+    color: var(--green-border);
 }
 
 .flow-step-num {

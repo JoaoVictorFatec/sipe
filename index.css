@@ -41,24 +41,24 @@
     display: flex;
     align-items: center;
     padding: 20px;
-    border: 2px solid var(--alert);
-    border-left: 10px solid var(--alert);
+    border: 2px solid var(--red);
+    border-left: 10px solid var(--red);
     border-radius: var(--radius);
     background: color-mix(
             in oklab,
-            var(--alert),
+            var(--red),
             var(--white) 95%);
 }
 
 .toast-icon {
     display: flex;
     margin-right: 20px;
-    color: var(--alert);
+    color: var(--red);
     font-size: 36px;
 }
 
 .toast-content h4 {
-    color: color-mix(in oklab, var(--alert), var(--black) 40%);
+    color: color-mix(in oklab, var(--red), var(--black) 40%);
     font-size: var(--text-size);
     font-weight: bold;
     text-transform: uppercase;
@@ -72,7 +72,7 @@
     border: none;
     border-radius: var(--radius);
     margin-left: auto;
-    background: var(--alert);
+    background: var(--red);
     color: var(--white);
     font-weight: bold;
     font-size: var(--smaller-text-size);
@@ -121,7 +121,7 @@
 }
 
 .card-military {
-    border-top: 3px solid var(--military-green);
+    border-top: 3px solid var(--dark-green);
 }
 
 .card-purple .quick-actions-icon,
@@ -130,7 +130,7 @@
 }
 
 .card-military .quick-actions-icon {
-    color: var(--military-green);
+    color: var(--dark-green);
 }
 
 .analytics-summary-bar {
@@ -167,7 +167,7 @@
 
 .activity .metric-icon-box {
     background: var(--light-green);
-    color: var(--military-green);
+    color: var(--dark-green);
 }
 
 .activity-box {
@@ -183,7 +183,7 @@
 }
 
 .activity-number {
-    color: var(--military-green);
+    color: var(--dark-green);
 }
 
 .thermometer-track {
@@ -201,10 +201,10 @@
     border-radius: var(--radius);
     background: linear-gradient(
             90deg,
-            var(--military-green) 0%,
+            var(--dark-green) 0%,
             color-mix(
                     in oklab,
-                    var(--military-green),
+                    var(--dark-green),
                     var(--white) 20%));
 }
 
@@ -228,12 +228,12 @@
     border-radius: var(--radius);
     margin-top: 20px;
     background: color-mix(in oklab,
-    var(--military-green),
+    var(--dark-green),
     var(--white) 90%);
 }
 
 .calendar-day-name {
-    color: var(--military-green);
+    color: var(--dark-green);
     text-align: center;
     font-weight: bold;
 }
@@ -251,7 +251,7 @@
 }
 
 .calendar-day.today {
-    background: var(--military-green);
+    background: var(--dark-green);
     color: var(--white);
 }
 
@@ -305,5 +305,5 @@
 }
 
 .timeline-card.military-edge {
-    border-left-color: var(--military-green);
+    border-left-color: var(--dark-green);
 }

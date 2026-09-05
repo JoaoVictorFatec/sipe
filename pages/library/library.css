@@ -918,7 +918,7 @@
 
 .upload-progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--military-green), #6db35a);
+    background: linear-gradient(90deg, var(--dark-green), #6db35a);
     border-radius: 2px;
     width: 0;
     transition: width 1.5s ease;
