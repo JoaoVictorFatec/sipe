@@ -15,6 +15,7 @@
     --yellow: #fde047;
     --brown: #4A3833;
     --amber: #A16207;
+    --blue: #0369a1;
 
     --light-purple: #e0dcf8;
     --light-green: #DCFCE7;
@@ -808,6 +809,12 @@ body {
     color: #1e293b;
 }
 
+.modal-subtitle {
+    font-size: 14px;
+    font-weight: 800;
+    color: #1e293b;
+}
+
 .modal-header {
     display: flex;
     justify-content: space-between;
@@ -1055,6 +1062,10 @@ body {
 
 .amber {
     color: var(--amber) !important;
+}
+
+.blue {
+    color: var(--blue) !important;
 }
 
 .bg-light-purple {

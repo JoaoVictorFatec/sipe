@@ -37,11 +37,11 @@
             </a>
         </div>
         <div class="sidebar-footer">
-            <a href="#" class="menu-item" style="padding: 10px 14px">
+            <a href="#" class="menu-item">
                 <i class="ti ti-settings"></i>
                 <span>Configurações</span>
             </a>
-            <a href="#" class="menu-item" style="padding: 10px 14px">
+            <a href="#" class="menu-item">
                 <i class="ti ti-headset"></i>
                 <span>Suporte</span>
             </a>
@@ -56,15 +56,11 @@
                     <option>Colégio Cavlac</option>
                     <option>Colégio Anglo</option>
                 </select>
-                <div class="system-chip">
+                <div class="system-chip system-chip-purple">
                     <i class="ti ti-school"></i>
                     <span>Sistema Anglo</span>
                 </div>
-                <div class="system-chip" style="
-                background: linear-gradient(135deg, #f0fdf4, #dcfce7);
-                border-color: #86efac;
-                color: #15803d;
-              ">
+                <div class="system-chip system-chip-green">
                     <i class="ti ti-calendar-check"></i>
                     <span>2026</span>
                 </div>
@@ -95,38 +91,38 @@
 
                 <div class="kpi-grid">
                     <div class="kpi-card" id="kpi1">
-                        <div class="kpi-icon" style="background: #ede9fe; color: #6d28d9">
+                        <div class="kpi-icon bg-light-purple purple">
                             <i class="ti ti-books"></i>
                         </div>
                         <div>
-                            <div class="kpi-number" style="color: #6d28d9">248</div>
+                            <div class="kpi-number purple">248</div>
                             <div class="kpi-label">Materiais Disponíveis</div>
                         </div>
                     </div>
                     <div class="kpi-card" id="kpi2">
-                        <div class="kpi-icon" style="background: #dcfce7; color: #15803d">
+                        <div class="kpi-icon bg-light-green green">
                             <i class="ti ti-school"></i>
                         </div>
                         <div>
-                            <div class="kpi-number" style="color: #15803d">3</div>
+                            <div class="kpi-number green">3</div>
                             <div class="kpi-label">Sistemas de Ensino</div>
                         </div>
                     </div>
                     <div class="kpi-card" id="kpi3">
-                        <div class="kpi-icon" style="background: #fef9c3; color: #a16207">
+                        <div class="kpi-icon bg-light-yellow amber">
                             <i class="ti ti-cpu"></i>
                         </div>
                         <div>
-                            <div class="kpi-number" style="color: #a16207">12.540</div>
+                            <div class="kpi-number amber">12.540</div>
                             <div class="kpi-label">Conteúdos Indexados IA</div>
                         </div>
                     </div>
                     <div class="kpi-card" id="kpi4">
-                        <div class="kpi-icon" style="background: #fff7ed; color: #c2410c">
+                        <div class="kpi-icon bg-light-orange amber">
                             <i class="ti ti-file-certificate"></i>
                         </div>
                         <div>
-                            <div class="kpi-number" style="color: #c2410c">1.284</div>
+                            <div class="kpi-number amber">1.284</div>
                             <div class="kpi-label">Planejamentos Gerados</div>
                         </div>
                     </div>
@@ -175,7 +171,7 @@
                     </div>
                     <div class="filter-divider"></div>
                     <div>
-                        <div class="filter-label" style="margin-bottom: 4px">Sistema</div>
+                        <div class="filter-label">Sistema</div>
                         <label for="filterSistema"></label>
                         <select class="filter-select" id="filterSistema" onchange="filterMaterials()">
                             <option value="">Todos</option>
@@ -186,7 +182,7 @@
                         </select>
                     </div>
                     <div>
-                        <div class="filter-label" style="margin-bottom: 4px">Série</div>
+                        <div class="filter-label">Série</div>
                         <label for="filterSerie"></label>
                         <select class="filter-select" id="filterSerie" onchange="filterMaterials()">
                             <option value="">Todas</option>
@@ -197,7 +193,7 @@
                         </select>
                     </div>
                     <div>
-                        <div class="filter-label" style="margin-bottom: 4px">Disciplina</div>
+                        <div class="filter-label">Disciplina</div>
                         <label for="filterDisc"></label>
                         <select class="filter-select"
                                 id="filterDisc"
@@ -211,7 +207,7 @@
                         </select>
                     </div>
                     <div>
-                        <div class="filter-label" style="margin-bottom: 4px">Bimestre</div>
+                        <div class="filter-label">Bimestre</div>
                         <label for="filterBim"></label>
                         <select class="filter-select"
                                 id="filterBim"
@@ -272,9 +268,7 @@
         <div class="modal-header">
             <div>
                 <div class="modal-title">⚙ Gestão de Conteúdos</div>
-                <div style="font-size: 12px; color: var(--muted); margin-top: 3px">Administração da base de conhecimento
-                    institucional
-                </div>
+                <div class="modal-subtitle">Administração da base de conhecimento institucional</div>
             </div>
             <button class="modal-close" onclick="closeAdminModal()"><i class="ti ti-x"></i></button>
         </div>
@@ -288,7 +282,7 @@
 
         <div class="upload-section">
             <div class="upload-section-title">
-                <i class="ti ti-books" style="color: var(--purple)"></i> Apostilas e Livros Didáticos
+                <i class="ti ti-books purple"></i> Apostilas e Livros Didáticos
             </div>
             <div class="upload-grid">
                 <div class="upload-item uploaded" onclick="simulateUpload(this)">
@@ -328,7 +322,7 @@
 
         <div class="upload-section">
             <div class="upload-section-title">
-                <i class="ti ti-heart" style="color: #c2410c"></i>
+                <i class="ti ti-heart amber"></i>
                 <span>Livros Socioemocionais</span>
             </div>
             <div class="upload-grid">
@@ -353,7 +347,7 @@
 
         <div class="upload-section">
             <div class="upload-section-title">
-                <i class="ti ti-certificate" style="color: #b91c1c"></i>
+                <i class="ti ti-certificate red"></i>
                 <span>BNCC e Documentos Oficiais</span>
             </div>
             <div class="upload-grid">
@@ -378,7 +372,7 @@
 
         <div class="upload-section">
             <div class="upload-section-title">
-                <i class="ti ti-clipboard-list" style="color: #0369a1"></i>
+                <i class="ti ti-clipboard-list blue"></i>
                 <span>Modelos de Avaliação e Planejamento</span>
             </div>
             <div class="upload-grid">
@@ -401,14 +395,7 @@
             </div>
         </div>
 
-        <div style="background: #f5f3ff;
-            border: 1px solid #c4b5fd;
-            border-radius: 10px;
-            padding: 14px 16px;
-            font-size: 12px;
-            color: #4c1d95;
-            margin-top: 4px;
-          ">
+        <div class="modal-footer">
             <strong>🤖 Indexação Automática:</strong>
             <span>Após o ‘upload’, o SIPE processa, indexa e disponibiliza o conteúdo para a IA em até</span>
             <strong>2 minutos.</strong>
