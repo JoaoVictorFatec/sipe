@@ -465,14 +465,14 @@ function renderMaterials(list) {
     grid.innerHTML = list
         .map(
             (m) => `
-      <div class="mat-card ${selectedId === m.id ? "selected" : ""}" id="mat_${m.id}" onclick="openPanel(${m.id})">
-        <div class="mat-card-spine ${m.spineClass}"></div>
-        <div class="mat-card-body">
-          <div class="mat-type-row">
-            <span class="mat-type-badge ${m.typeClass}">
+      <div class="materials-card ${selectedId === m.id ? "selected" : ""}" id="mat_${m.id}" onclick="openPanel(${m.id})">
+        <div class="materials-card-spine ${m.spineClass}"></div>
+        <div class="materials-card-body">
+          <div class="materials-type-row">
+            <span class="materials-type-badge ${m.typeClass}">
               <i class="ti ${m.icon}"></i> ${m.typeLabel}
             </span>
-            <span class="mat-status ${m.status}">
+            <span class="materials-status ${m.status}">
               ${
                 m.status === "ok"
                     ? '<i class="ti ti-circle-check-filled"></i> Homologado'
@@ -480,28 +480,28 @@ function renderMaterials(list) {
             }
             </span>
           </div>
-          <div class="mat-title">${m.title}</div>
-          <div class="mat-subtitle">${m.subtitle}</div>
-          <div class="mat-tags">${m.tags
+          <div class="materials-title">${m.title}</div>
+          <div class="materials-subtitle">${m.subtitle}</div>
+          <div class="materials-tags">${m.tags
                 .slice(0, 4)
-                .map((t) => `<span class="mat-tag">${t}</span>`)
+                .map((t) => `<span class="materials-tag">${t}</span>`)
                 .join("")}</div>
-          <div class="mat-footer">
-            <div class="mat-footer-info"><i class="ti ti-refresh"></i> ${m.updated}</div>
-            <div class="mat-actions">
-              <button class="mat-btn mat-btn-view" onclick="event.stopPropagation(); openPanel(${m.id})">
+          <div class="materials-footer">
+            <div class="materials-footer-info"><i class="ti ti-refresh"></i> ${m.updated}</div>
+            <div class="materials-actions">
+              <button class="materials-button materials-button-view" onclick="event.stopPropagation(); openPanel(${m.id})">
                 <i class="ti ti-eye"></i> Visualizar
               </button>
-              <button class="mat-btn mat-btn-ai" onclick="event.stopPropagation(); openPanelAndSuggest(${m.id})">
+              <button class="materials-button materials-button-ai" onclick="event.stopPropagation(); openPanelAndSuggest(${m.id})">
                 <i class="ti ti-cpu"></i> Usar na IA
               </button>
             </div>
           </div>
         </div>
-        <div class="mat-usage-bar">
-          <div class="mat-usage-stat"><i class="ti ti-file-text"></i> <strong>${m.uses.plans}</strong> planos gerados</div>
-          <div class="mat-usage-stat"><i class="ti ti-clipboard-list"></i> <strong>${m.uses.evals}</strong> avaliações</div>
-          <div class="mat-usage-stat"><i class="ti ti-clock"></i> ${m.uses.last}</div>
+        <div class="materials-usage-bar">
+          <div class="materials-usage-stat"><i class="ti ti-file-text"></i> <strong>${m.uses.plans}</strong> planos gerados</div>
+          <div class="materials-usage-stat"><i class="ti ti-clipboard-list"></i> <strong>${m.uses.evals}</strong> avaliações</div>
+          <div class="materials-usage-stat"><i class="ti ti-clock"></i> ${m.uses.last}</div>
         </div>
       </div>
     `,
@@ -548,7 +548,7 @@ function openPanel(id, autoSuggest) {
 
     selectedId = id;
     document
-        .querySelectorAll(".mat-card")
+        .querySelectorAll(".materials-card")
         .forEach((c) => c.classList.remove("selected"));
     const card = document.getElementById("mat_" + id);
     if (card) card.classList.add("selected");
@@ -636,7 +636,7 @@ function openPanel(id, autoSuggest) {
           <i class="ti ti-sparkles"></i>
           <div class="panel-ai-header-text">Sugestões da IA para este Conteúdo</div>
         </div>
-        <div class="panel-ai-desc">A IA analisou o material e pode gerar recomendações pedagógicas específicas baseadas neste conteúdo homologado.</div>
+        <div class="panel-ai-description">A IA analisou o material e pode gerar recomendações pedagógicas específicas baseadas neste conteúdo homologado.</div>
         <div class="panel-ai-results ${already ? "visible" : ""}" id="panelAiResults">
           ${
         already
@@ -651,11 +651,11 @@ function openPanel(id, autoSuggest) {
     }
         </div>
         <div id="panelAiLoading" style="display:none;align-items:center;gap:8px;padding:8px 0;font-size:12px;color:var(--purple)">
-          <span class="ai-spinner visible"></span> Analisando conteúdo indexado...
+          <span class="library-ai-spinner visible"></span> Analisando conteúdo indexado...
         </div>
         ${
         !already
-            ? `<button class="btn-generate-suggestions" onclick="generatePanelSuggestions(${id})">
+            ? `<button class="button-generate-suggestions" onclick="generatePanelSuggestions(${id})">
           <i class="ti ti-bolt"></i> Gerar Sugestões
         </button>`
             : `<div style="text-align:center;font-size:11px;font-weight:700;color:#15803D;padding:6px 0">✓ Sugestões geradas com sucesso</div>`
@@ -678,13 +678,13 @@ function openPanelAndSuggest(id) {
 function closePanel() {
     document.getElementById("detailPanel").classList.remove("open");
     selectedId = null;
-    document.querySelectorAll(".mat-card")
+    document.querySelectorAll(".materials-card")
         .forEach((c) => c.classList.remove("selected"));
 }
 
 function generatePanelSuggestions(id) {
     const m = materials.find((x) => x.id === id);
-    const btn = document.querySelector(".btn-generate-suggestions");
+    const btn = document.querySelector(".button-generate-suggestions");
     const loading = document.getElementById("panelAiLoading");
     const results = document.getElementById("panelAiResults");
     if (btn) btn.style.display = "none";
@@ -702,7 +702,7 @@ function generatePanelSuggestions(id) {
         }
         const aiBox = document.querySelector(".panel-ai-box");
         if (aiBox) {
-            const oldBtn = aiBox.querySelector(".btn-generate-suggestions");
+            const oldBtn = aiBox.querySelector(".button-generate-suggestions");
             if (oldBtn)
                 oldBtn.outerHTML = `<div style="text-align:center;font-size:11px;font-weight:700;color:#15803D;padding:6px 0">✓ Sugestões geradas com sucesso</div>`;
         }
