@@ -394,12 +394,26 @@
     box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
 }
 
-.modal-body {
+.review-modal-body {
     padding: 28px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+.review-modal-info {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #15803d;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
 }
 
 .gabarito-row {
@@ -445,4 +459,13 @@
     display: flex;
     align-items: center;
     gap: 4px;
+}
+
+.aside-card {
+    position: sticky;
+    top: 0;
+}
+
+.doc-section {
+    display: none
 }
