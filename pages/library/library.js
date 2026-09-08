@@ -493,7 +493,7 @@ function renderMaterials(list) {
                 <i class="ti ti-eye"></i> Visualizar
               </button>
               <button class="materials-button materials-button-ai" onclick="event.stopPropagation(); openPanelAndSuggest(${m.id})">
-                <i class="ti ti-cpu"></i> Usar na IA
+                <i class="ti ti-cpu"></i> Usar IA
               </button>
             </div>
           </div>
