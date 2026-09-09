@@ -1,23 +1,23 @@
 .step-trail {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     color: var(--muted);
     font-size: var(--smaller-text-size);
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .step-trail .step-dot {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
+    width: 30px;
     aspect-ratio: 1;
     border-radius: 50%;
     background: var(--cotton);
     color: var(--muted);
     font-size: var(--smaller-text-size);
-    font-weight: 800;
+    font-weight: bold;
 }
 
 .step-trail .step-dot.done {
@@ -36,15 +36,15 @@
 }
 
 .selector-card {
+    padding: 28px 32px;
     border: 2px solid var(--cotton);
     border-radius: var(--radius);
-    padding: 28px 32px;
     background: var(--white);
 }
 
 .selector-card h3 {
     color: var(--muted);
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .selector-card h3 i {
@@ -66,10 +66,10 @@
 }
 
 .document-area {
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 0;
+    flex: 1;
 }
 
 .chip-draft {
@@ -91,27 +91,27 @@
     gap: 10px;
 }
 
-.btn-outline-white {
+.button-outline-white {
     display: flex;
     align-items: center;
     gap: 6px;
     padding: 8px 16px;
     border: 1px solid var(--cotton);
     border-radius: var(--radius);
-    font-size: calc(var(--smaller-text-size) - 2px);
-    font-weight: 600;
     background: transparent;
     color: var(--cotton);
+    font-size: calc(var(--smaller-text-size) - 2px);
+    font-weight: bold;
     cursor: pointer;
     transition: all 0.2s;
 }
 
-.btn-outline-white:hover {
+.button-outline-white:hover {
     border-color: var(--cotton);
     color: var(--white);
 }
 
-.btn-approve {
+.button-approve {
     display: flex;
     align-items: center;
     gap: 6px;
@@ -121,12 +121,12 @@
     background: var(--dark-green);
     color: var(--white);
     font-size: calc(var(--smaller-text-size) - 2px);
-    font-weight: 700;
+    font-weight: bold;
     cursor: pointer;
     transition: all 0.2s;
 }
 
-.btn-approve:hover {
+.button-approve:hover {
     background: var(--dark-green);
 }
 
@@ -141,15 +141,15 @@
     background: var(--navy-blue);
     color: var(--white);
     font-size: calc(var(--smaller-text-size) - 4px);
-    font-weight: 700;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
 .schedule-table .date {
-    font-weight: 500;
+    font-size: calc(var(--smaller-text-size) - 4px);
+    font-weight: bold;
     opacity: 0.6;
     text-transform: none;
-    font-size: calc(var(--smaller-text-size) - 4px);
 }
 
 .schedule-table th.time-col {
@@ -168,9 +168,6 @@
     );
 }
 
-.lesson-cell:hover {
-    background: var(--light-purple) !important;
-}
 
 .schedule-table td {
     border: 1px solid var(--cotton);
@@ -179,11 +176,11 @@
 .time-cell {
     padding: 14px 12px;
     border-right: 2px solid var(--cotton);
-    font-weight: 700;
-    font-size: calc(var(--smaller-text-size) - 2px);
-    text-align: center;
     background: var(--white);
     color: var(--muted);
+    font-weight: bold;
+    font-size: calc(var(--smaller-text-size) - 2px);
+    text-align: center;
 }
 
 .lesson-cell {
@@ -194,7 +191,7 @@
 }
 
 .lesson-cell:hover {
-    background: var(--light-purple);
+    background: var(--light-purple) !important;
 }
 
 .lesson-cell.ai-filled {
@@ -213,27 +210,27 @@
 
 .lesson-subject {
     font-size: var(--smaller-text-size);
-    font-weight: 800;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
 .lesson-content-title {
-    font-size: calc(var(--smaller-text-size) - 2px);
-    font-weight: 700;
     color: var(--navy-blue);
+    font-size: calc(var(--smaller-text-size) - 2px);
+    font-weight: bold;
 }
 
-.lesson-ref {
-    font-size: calc(var(--smaller-text-size) - 4px);
+.lesson-reference {
     color: var(--muted);
+    font-size: calc(var(--smaller-text-size) - 4px);
 }
 
 .lesson-strategy {
     display: flex;
     align-items: flex-start;
     gap: 4px;
-    font-size: calc(var(--smaller-text-size) - 4px);
     color: var(--muted);
+    font-size: calc(var(--smaller-text-size) - 4px);
 }
 
 .lesson-strategy i {
@@ -246,8 +243,8 @@
     align-items: center;
     justify-content: center;
     height: 90px;
-    font-size: var(--smaller-text-size);
     color: var(--cotton);
+    font-size: var(--smaller-text-size);
 }
 
 .typing-placeholder {
@@ -257,31 +254,31 @@
     padding: 12px 14px;
 }
 
-.subj-mat {
+.subject-math {
     color: var(--purple);
 }
 
-.subj-por {
-    color: #0369a1;
+.subject-portuguese {
+    color: var(--blue);
 }
 
-.subj-geo {
+.subject-geography {
     color: var(--dark-green);
 }
 
-.subj-his {
+.subject-history {
     color: var(--orange);
 }
 
-.subj-cie {
-    color: #0e7490;
+.subject-science {
+    color: var(--blue);
 }
 
 .side-panel {
+    flex-shrink: 0;
     width: 0;
     overflow: hidden;
     transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    flex-shrink: 0;
 }
 
 .side-panel.open {
@@ -300,20 +297,17 @@
 }
 
 .panel-header {
-    background: var(--navy-blue);
     padding: 20px;
+    background: var(--navy-blue);
     color: var(--white);
     overflow: hidden;
 }
 
 .panel-header h4 {
-    font-size: var(--smaller-text-size);
-    font-weight: 700;
-}
-
-.panel-header h4 i {
-    color: var(--purple);
     margin-right: 10px;
+    color: var(--purple);
+    font-size: var(--smaller-text-size);
+    font-weight: bold;
 }
 
 .panel-header p {
@@ -326,6 +320,16 @@
     flex-direction: column;
     gap: 16px;
     padding: 20px;
+}
+
+.panel-section-title {
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--cotton);
+    margin-top: 4px;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-size: var(--smaller-text-size);
+    font-weight: bold;
 }
 
 .quality-grid {
@@ -346,53 +350,43 @@
     text-align: center;
 }
 
-.quality-card .q-label {
+.quality-card .quality-label {
     color: var(--muted);
     font-size: calc(var(--smaller-text-size) - 2px);
-    font-weight: 700;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
-.quality-card .q-value {
-    font-weight: 800;
+.quality-card .quality-value {
+    font-weight: bold;
 }
 
-.quality-card .q-value.green {
-    color: #16a34a;
+.quality-card .quality-value.green {
+    color: var(--green);
 }
 
-.quality-card .q-value.purple {
+.quality-card .quality-value.purple {
     color: var(--purple);
 }
 
-.quality-card .q-value.orange {
+.quality-card .quality-value.orange {
     color: var(--orange);
 }
 
-.quality-card .q-value.red {
+.quality-card .quality-value.red {
     color: var(--red);
-}
-
-.panel-section-title {
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--cotton);
-    color: var(--muted);
-    text-transform: uppercase;
-    font-size: var(--smaller-text-size);
-    font-weight: 700;
-    margin-top: 4px;
 }
 
 .ai-loading-overlay {
     position: fixed;
+    z-index: 2;
+    inset: 0;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 24px;
     background: rgba(15, 23, 42, 0.85);
-    z-index: 100;
-    inset: 0;
 }
 
 .ai-loading-overlay.active {
@@ -412,7 +406,7 @@
 .ai-loader-title {
     margin-bottom: 10px;
     color: var(--white);
-    font-weight: 800;
+    font-weight: bold;
 }
 
 .ai-loader-step {
@@ -450,17 +444,17 @@
     position: fixed;
     bottom: 32px;
     right: 32px;
+    z-index: 2;
     display: none;
     align-items: center;
     gap: 12px;
     padding: 16px 24px;
     border-radius: var(--radius);
     background: var(--dark-green);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
     color: var(--white);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
     font-size: var(--smaller-text-size);
-    font-weight: 600;
-    z-index: 200;
+    font-weight: bold;
     animation: slideUp 0.3s ease;
 }
 

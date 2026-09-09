@@ -209,7 +209,7 @@ function renderCell(lesson) {
     return `
     <div class="lesson-subject ${cls}">${lesson.subject}</div>
     <div class="lesson-content-title">${lesson.title}</div>
-    <div class="lesson-ref"><i class="ti ti-book" style="font-size:12px; margin-right:3px"></i>${lesson.ref}</div>
+    <div class="lesson-reference"><i class="ti ti-book" style="font-size:12px; margin-right:3px"></i>${lesson.ref}</div>
     <div class="lesson-strategy"><i class="ti ti-bulb"></i>${lesson.strategy}</div>
     ${bnccHtml}
   `;
