@@ -1,6 +1,6 @@
 function selectOrigin(el) {
     document
-        .querySelectorAll(".origin-opt")
+        .querySelectorAll(".origin-option")
         .forEach((o) => o.classList.remove("selected"));
     el.classList.add("selected");
 }
@@ -223,18 +223,18 @@ function renderDocument() {
         const delay = idx * 100;
         html += `
       <div class="question-block ai-filled" style="opacity:1;transition:opacity .4s ${delay}ms" data-q="${q.num}">
-        <div class="q-num">
+        <div class="quality-number">
           Questão ${q.num}
           <span class="trace-tag">📌 ${q.origin}</span>
           <span style="margin-left:auto;font-size:12px;color:var(--muted);font-weight:600">${q.val}</span>
         </div>
-        <div class="q-text">${q.text}</div>
-        <div class="q-options">
+        <div class="quality-text">${q.text}</div>
+        <div class="quality-options">
           ${q.opts
             .map(
                 (o) => `
-            <div class="q-option${o.correct ? " correct-opt" : ""}">
-              <div class="opt-letter">${o.l}</div> ${o.t}
+            <div class="quality-option${o.correct ? " correct-opt" : ""}">
+              <div class="option-letter">${o.l}</div> ${o.t}
               ${o.correct ? '<i class="ti ti-check" style="margin-left:auto;font-size:16px;color:#16A34A"></i>' : ""}
             </div>
           `,
@@ -251,13 +251,13 @@ function renderDocument() {
         const delay = (objQs.length + idx) * 100;
         html += `
       <div class="question-block ai-filled" style="opacity:0;transition:opacity .4s ${delay}ms" data-q="${q.num}">
-        <div class="q-num">
+        <div class="quality-number">
           Questão ${q.num}
           <span class="trace-tag">📌 ${q.origin}</span>
           <span style="margin-left:auto;font-size:12px;color:var(--muted);font-weight:600">${q.val}</span>
         </div>
-        <div class="q-text" style="white-space:pre-line">${q.text}</div>
-        <div class="q-dissert">
+        <div class="quality-text" style="white-space:pre-line">${q.text}</div>
+        <div class="quality-dissert">
           <div class="dissert-lines">
             ${Array(4).fill('<div class="dissert-line"></div>').join("")}
           </div>
@@ -275,7 +275,7 @@ function renderDocument() {
         .map(
             (q) => `
           <div class="trace-card">
-            <div class="trace-q">Questão ${q.num}</div>
+            <div class="trace-question">Questão ${q.num}</div>
             <div class="trace-origin">${q.origin}</div>
             <div class="trace-detail">${q.bncc}</div>
           </div>
@@ -303,11 +303,11 @@ function renderDocument() {
 }
 
 function openGabarito() {
-    document.getElementById("modal-bg").classList.add("open");
+    document.getElementById("review-modal").classList.add("open");
 }
 
 function closeModalBtn() {
-    document.getElementById("modal-bg").classList.remove("open");
+    document.getElementById("review-modal").classList.remove("open");
 }
 
 function showToast() {
