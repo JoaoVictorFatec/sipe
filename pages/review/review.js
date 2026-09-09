@@ -225,7 +225,7 @@ function renderDocument() {
       <div class="question-block ai-filled" style="opacity:1;transition:opacity .4s ${delay}ms" data-q="${q.num}">
         <div class="quality-number">
           Questão ${q.num}
-          <span class="trace-tag">📌 ${q.origin}</span>
+          <span class="trace-tag purple"><i class="bi bi-pin-angle-fill"></i> ${q.origin}</span>
           <span style="margin-left:auto;font-size:12px;color:var(--muted);font-weight:600">${q.val}</span>
         </div>
         <div class="quality-text">${q.text}</div>
@@ -253,7 +253,7 @@ function renderDocument() {
       <div class="question-block ai-filled" style="opacity:0;transition:opacity .4s ${delay}ms" data-q="${q.num}">
         <div class="quality-number">
           Questão ${q.num}
-          <span class="trace-tag">📌 ${q.origin}</span>
+          <span class="trace-tag purple"><i class="bi bi-pin-angle-fill"></i> ${q.origin}</span>
           <span style="margin-left:auto;font-size:12px;color:var(--muted);font-weight:600">${q.val}</span>
         </div>
         <div class="quality-text" style="white-space:pre-line">${q.text}</div>
@@ -269,7 +269,7 @@ function renderDocument() {
 
     html += `
     <div class="trace-section">
-      <div class="trace-title"><i class="ti ti-sitemap" style="font-size:20px"></i> Rastreabilidade Pedagógica — Gerado pelo SIPE</div>
+      <div class="trace-title"><i class="bi bi-diagram-3"></i> Rastreabilidade Pedagógica — Gerado pelo SIPE</div>
       <div class="trace-grid">
         ${questions
         .map(

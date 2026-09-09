@@ -121,23 +121,23 @@
 
             <div class="quality-bar">
                 <div class="q-card purple">
-                    <div class="q-icon">📊</div>
+                    <div class="q-icon purple"><i class="bi bi-bar-chart-fill"></i></div>
                     <div class="q-val" id="qv-cob">—</div>
                     <div class="q-label">Cobertura do Conteúdo</div>
                 </div>
                 <div class="q-card green">
-                    <div class="q-icon">📚</div>
+                    <div class="q-icon"><i class="bi bi-journal-richtext"></i></div>
                     <div class="q-val" id="qv-cont">—</div>
                     <div class="q-label">Conteúdos Utilizados</div>
                 </div>
                 <div class="q-card orange">
-                    <div class="q-icon">🎯</div>
+                    <div class="q-icon"><i class="bi bi-bullseye"></i></div>
                     <div class="q-val" id="qv-bncc">—</div>
                     <div class="q-label">Alinhamento BNCC</div>
                 </div>
                 <div class="q-card red">
-                    <div class="q-icon">⚠</div>
-                    <div class="q-val red" id="qv-pend">—</div>
+                    <div class="q-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
+                    <div class="q-val" id="qv-pend">—</div>
                     <div class="q-label">Questões para Revisão</div>
                 </div>
             </div>
@@ -151,28 +151,28 @@
                         </div>
                         <div class="origin-grid">
                             <div class="origin-option selected" onclick="selectOrigin(this)">
-                                <div class="opt-icon">📅</div>
+                                <div class="opt-icon purple"><i class="bi bi-calendar2-week"></i></div>
                                 <div>
                                     <div class="opt-label">Planejamento da Semana</div>
                                     <div class="opt-desc">Conteúdos da semana 22 (09–13/06)</div>
                                 </div>
                             </div>
                             <div class="origin-option" onclick="selectOrigin(this)">
-                                <div class="opt-icon">📆</div>
+                                <div class="opt-icon purple"><i class="bi bi-calendar3"></i></div>
                                 <div>
                                     <div class="opt-label">Planejamento do Mês</div>
                                     <div class="opt-desc">Todo o conteúdo de junho/2026</div>
                                 </div>
                             </div>
                             <div class="origin-option" onclick="selectOrigin(this)">
-                                <div class="opt-icon">🎓</div>
+                                <div class="opt-icon purple"><i class="bi bi-mortarboard"></i></div>
                                 <div>
                                     <div class="opt-label">Conteúdo Ministrado</div>
                                     <div class="opt-desc">Apenas o que foi aplicado em sala</div>
                                 </div>
                             </div>
                             <div class="origin-option" onclick="selectOrigin(this)">
-                                <div class="opt-icon">✏️</div>
+                                <div class="opt-icon purple"><i class="bi bi-pencil-fill"></i></div>
                                 <div>
                                     <div class="opt-label">Seleção Manual</div>
                                     <div class="opt-desc">Escolho os tópicos manualmente</div>
@@ -230,9 +230,15 @@
                         <div class="field-group">
                             <label>Nível de Dificuldade</label>
                             <div class="difficulty-row">
-                                <button class="diff-btn" onclick="selectDiff(this, 'easy')">😊 Fácil</button>
-                                <button class="diff-btn sel-med" onclick="selectDiff(this, 'med')">🧠 Médio</button>
-                                <button class="diff-btn" onclick="selectDiff(this, 'hard')">🔥 Difícil</button>
+                                <button class="diff-btn purple" onclick="selectDiff(this, 'easy')"><i
+                                        class="bi bi-check-circle-fill"></i> Fácil
+                                </button>
+                                <button class="diff-btn sel-med purple" onclick="selectDiff(this, 'med')"><i
+                                        class="bi bi-speedometer2"></i> Médio
+                                </button>
+                                <button class="diff-btn purple" onclick="selectDiff(this, 'hard')"><i
+                                        class="bi bi-fire"></i> Difícil
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -245,7 +251,7 @@
                     </div>
 
                     <div class="source-item">
-                        <div class="source-icon">📘</div>
+                        <div class="source-icon purple"><i class="bi bi-journal-text"></i></div>
                         <div>
                             <div class="src-name">Apostila Anglo — Matemática</div>
                             <div class="src-detail">Módulo 4 · Páginas 140–145</div>
@@ -253,7 +259,7 @@
                         </div>
                     </div>
                     <div class="source-item">
-                        <div class="source-icon">📗</div>
+                        <div class="source-icon purple"><i class="bi bi-journal-text"></i></div>
                         <div>
                             <div class="src-name">Planejamento Semanal — Sem. 22</div>
                             <div class="src-detail">Aprovado pela coordenação em 06/06</div>
@@ -261,7 +267,7 @@
                         </div>
                     </div>
                     <div class="source-item">
-                        <div class="source-icon">📙</div>
+                        <div class="source-icon purple"><i class="bi bi-journal-text"></i></div>
                         <div>
                             <div class="src-name">Conteúdo Ministrado em Sala</div>
                             <div class="src-detail">Registro de aulas: 09/06 a 13/06</div>
@@ -269,7 +275,7 @@
                         </div>
                     </div>
                     <div class="source-item">
-                        <div class="source-icon">📕</div>
+                        <div class="source-icon purple"><i class="bi bi-journal-text"></i></div>
                         <div>
                             <div class="src-name">BNCC — Competências</div>
                             <div class="src-detail">EF03MA05 · EF03MA07 · EF03MA12</div>
@@ -366,16 +372,28 @@
 <div class="ai-overlay" id="ai-overlay">
     <div class="ai-box">
         <div class="ai-spinner"></div>
-        <div class="ai-title">⚡ IA Gerando Avaliação</div>
+        <div class="ai-title"><i class="bi bi-lightning-charge-fill yellow"></i> IA Gerando Avaliação</div>
         <div class="ai-step" id="ai-step">Iniciando análise do planejamento...</div>
         <div class="ai-track">
             <div class="ai-fill" id="ai-fill"></div>
         </div>
         <div class="scan-chips">
-            <div class="scan-chip" id="sc1">📅 Planejamento Sem. 22</div>
-            <div class="scan-chip" id="sc2">📘 Apostila Anglo</div>
-            <div class="scan-chip" id="sc3">📕 BNCC</div>
-            <div class="scan-chip" id="sc4">🎓 Conteúdo Ministrado</div>
+            <div class="scan-chip" id="sc1">
+                <i class="bi bi-calendar2-week"></i>
+                <span>Planejamento Sem. 22</span>
+            </div>
+            <div class="scan-chip" id="sc2">
+                <i class="bi bi-journal-text"></i>
+                <span>Apostila Anglo</span>
+            </div>
+            <div class="scan-chip" id="sc3">
+                <i class="bi bi-journal-text"></i>
+                <span>BNCC</span>
+            </div>
+            <div class="scan-chip" id="sc4">
+                <i class="bi bi-mortarboard"></i>
+                <span>Conteúdo Ministrado</span>
+            </div>
         </div>
     </div>
 </div>
@@ -401,7 +419,8 @@
                 <div class="answer-key-num">1</div>
                 <div>
                     <div class="answer-key-answer">Alternativa B — Real</div>
-                    <div class="answer-key-comment"> O aluno deve identificar a moeda oficial do Brasil dentro do contexto do
+                    <div class="answer-key-comment"> O aluno deve identificar a moeda oficial do Brasil dentro do
+                        contexto do
                         sistema monetário.
                     </div>
                     <div class="answer-key-origin">
@@ -414,7 +433,8 @@
                 <div class="answer-key-num">2</div>
                 <div>
                     <div class="answer-key-answer">Alternativa C — R$ 12,50</div>
-                    <div class="answer-key-comment">Resolução de situação-problema envolvendo adição de valores monetários com
+                    <div class="answer-key-comment">Resolução de situação-problema envolvendo adição de valores
+                        monetários com
                         reagrupamento.
                     </div>
                     <div class="answer-key-origin">
@@ -451,7 +471,8 @@
                 <div class="answer-key-num">5</div>
                 <div>
                     <div class="answer-key-answer">Alternativa D — Subtração</div>
-                    <div class="answer-key-comment">O aluno deve identificar a operação correta para resolver problemas de
+                    <div class="answer-key-comment">O aluno deve identificar a operação correta para resolver problemas
+                        de
                         troco.
                     </div>
                     <div class="answer-key-origin">
@@ -475,7 +496,8 @@
                 <div class="answer-key-num">7</div>
                 <div>
                     <div class="answer-key-answer">Alternativa A — 24</div>
-                    <div class="answer-key-comment">Aplicação da tabuada do 4 em contexto de agrupamento de objetos.</div>
+                    <div class="answer-key-comment">Aplicação da tabuada do 4 em contexto de agrupamento de objetos.
+                    </div>
                     <div class="answer-key-origin">
                         <i class="ti ti-book-2"></i>
                         <span>Planejamento Sem.22 · Tabuada · EF03MA12</span>
@@ -499,7 +521,8 @@
                 <div class="answer-key-num">9</div>
                 <div>
                     <div class="answer-key-answer">Resposta dissertativa — ver critérios</div>
-                    <div class="answer-key-comment">Resolução passo a passo de conta de adição com 3 parcelas. Aceitar tanto a
+                    <div class="answer-key-comment">Resolução passo a passo de conta de adição com 3 parcelas. Aceitar
+                        tanto a
                         forma horizontal quanto vertical, desde que o resultado (143) esteja correto.
                     </div>
                     <div class="answer-key-origin">

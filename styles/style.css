@@ -1079,6 +1079,14 @@ body {
     color: var(--red) !important;
 }
 
+.yellow {
+    color: var(--yellow) !important;
+}
+
+.orange {
+    color: var(--orange) !important;
+}
+
 .amber {
     color: var(--amber) !important;
 }
