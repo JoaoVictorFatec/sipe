@@ -571,13 +571,12 @@ body {
     line-height: 1;
 }
 
-.q-card .quality-label {
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--muted);
+.q-card .q-label {
     margin-top: 4px;
+    color: var(--muted);
+    font-size: var(--smaller-text-size);
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .q-card.purple .q-val {
