@@ -102,7 +102,10 @@
 
 .quick-actions-icon {
     color: var(--purple);
-    font-size: var(--larger-text-size);
+}
+
+.quick-actions-icon i {
+    font-size: 40px;
 }
 
 .quick-actions-title {
@@ -227,9 +230,7 @@
     border: 2px solid var(--cotton);
     border-radius: var(--radius);
     margin-top: 20px;
-    background: color-mix(in oklab,
-    var(--dark-green),
-    var(--white) 90%);
+    background: var(--light-cotton);
 }
 
 .calendar-day-name {
