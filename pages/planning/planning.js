@@ -332,7 +332,7 @@ function fillDocument() {
     document.getElementById("info-disciplina").textContent =
         "Matemática / Multi";
     const now = new Date();
-    document.getElementById("info-gen-time").textContent =
+    document.getElementById("information-generate-time").textContent =
         `SIPE IA · ${now.toLocaleTimeString("pt-BR", {hour: "2-digit", minute: "2-digit"})}`;
 
     setTimeout(() => {

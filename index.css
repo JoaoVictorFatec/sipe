@@ -119,11 +119,11 @@
     color: var(--white);
 }
 
-.card-lavender {
+.card-purple {
     border: 3px solid var(--purple);
 }
 
-.card-military {
+.card-dark-green {
     border-top: 3px solid var(--dark-green);
 }
 
@@ -132,7 +132,7 @@
     color: var(--white);
 }
 
-.card-military .quick-actions-icon {
+.card-dark-green .quick-actions-icon {
     color: var(--dark-green);
 }
 
