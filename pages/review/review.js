@@ -7,8 +7,8 @@ function selectOrigin(el) {
 
 function selectDiff(el, type) {
     document
-        .querySelectorAll(".diff-btn")
-        .forEach((b) => (b.className = "diff-btn"));
+        .querySelectorAll(".difficulty-button")
+        .forEach((b) => (b.className = "difficulty-button"));
     const map = {easy: "sel-easy", med: "sel-med", hard: "sel-hard"};
     el.classList.add(map[type]);
 }
@@ -225,7 +225,7 @@ function renderDocument() {
       <div class="question-block ai-filled" style="opacity:1;transition:opacity .4s ${delay}ms" data-q="${q.num}">
         <div class="quality-number">
           Questão ${q.num}
-          <span class="trace-tag purple"><i class="bi bi-pin-angle-fill"></i> ${q.origin}</span>
+          <span class="trace-tag"><i class="bi bi-pin-angle-fill"></i> ${q.origin}</span>
           <span style="margin-left:auto;font-size:12px;color:var(--muted);font-weight:600">${q.val}</span>
         </div>
         <div class="quality-text">${q.text}</div>
@@ -233,7 +233,7 @@ function renderDocument() {
           ${q.opts
             .map(
                 (o) => `
-            <div class="quality-option${o.correct ? " correct-opt" : ""}">
+            <div class="quality-option${o.correct ? " correct-option" : ""}">
               <div class="option-letter">${o.l}</div> ${o.t}
               ${o.correct ? '<i class="ti ti-check" style="margin-left:auto;font-size:16px;color:#16A34A"></i>' : ""}
             </div>
@@ -253,7 +253,7 @@ function renderDocument() {
       <div class="question-block ai-filled" style="opacity:0;transition:opacity .4s ${delay}ms" data-q="${q.num}">
         <div class="quality-number">
           Questão ${q.num}
-          <span class="trace-tag purple"><i class="bi bi-pin-angle-fill"></i> ${q.origin}</span>
+          <span class="trace-tag"><i class="bi bi-pin-angle-fill"></i> ${q.origin}</span>
           <span style="margin-left:auto;font-size:12px;color:var(--muted);font-weight:600">${q.val}</span>
         </div>
         <div class="quality-text" style="white-space:pre-line">${q.text}</div>

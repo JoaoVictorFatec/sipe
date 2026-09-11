@@ -84,7 +84,7 @@
 
         <div class="page-container">
             <div>
-                <div class="page-title">Gerador de Avaliações</div>
+                <h1 class="page-title">Gerador de Avaliações</h1>
                 <div class="page-subtitle">Crie avaliações alinhadas ao conteúdo efetivamente ministrado em sala.</div>
             </div>
 
@@ -123,22 +123,22 @@
                 <div class="q-card purple">
                     <div class="q-icon purple"><i class="bi bi-bar-chart-fill"></i></div>
                     <div class="q-val" id="qv-cob">—</div>
-                    <div class="q-label">Cobertura do Conteúdo</div>
+                    <strong class="q-label">Cobertura do Conteúdo</strong>
                 </div>
                 <div class="q-card green">
-                    <div class="q-icon"><i class="bi bi-journal-richtext"></i></div>
+                    <div class="q-icon"><i class="bi bi-bookmark-check-fill"></i></div>
                     <div class="q-val" id="qv-cont">—</div>
-                    <div class="q-label">Conteúdos Utilizados</div>
+                    <strong class="q-label">Conteúdos Utilizados</strong>
                 </div>
                 <div class="q-card orange">
                     <div class="q-icon"><i class="bi bi-bullseye"></i></div>
                     <div class="q-val" id="qv-bncc">—</div>
-                    <div class="q-label">Alinhamento BNCC</div>
+                    <strong class="q-label">Alinhamento BNCC</strong>
                 </div>
                 <div class="q-card red">
                     <div class="q-icon"><i class="bi bi-exclamation-triangle-fill"></i></div>
                     <div class="q-val" id="qv-pend">—</div>
-                    <div class="q-label">Questões para Revisão</div>
+                    <strong class="q-label">Questões para Revisão</strong>
                 </div>
             </div>
 
@@ -230,13 +230,13 @@
                         <div class="field-group">
                             <label>Nível de Dificuldade</label>
                             <div class="difficulty-row">
-                                <button class="diff-btn purple" onclick="selectDiff(this, 'easy')"><i
+                                <button class="difficulty-button" onclick="selectDiff(this, 'easy')"><i
                                         class="bi bi-check-circle-fill"></i> Fácil
                                 </button>
-                                <button class="diff-btn sel-med purple" onclick="selectDiff(this, 'med')"><i
+                                <button class="difficulty-button sel-med" onclick="selectDiff(this, 'med')"><i
                                         class="bi bi-speedometer2"></i> Médio
                                 </button>
-                                <button class="diff-btn purple" onclick="selectDiff(this, 'hard')"><i
+                                <button class="difficulty-button" onclick="selectDiff(this, 'hard')"><i
                                         class="bi bi-fire"></i> Difícil
                                 </button>
                             </div>
@@ -251,7 +251,7 @@
                     </div>
 
                     <div class="source-item">
-                        <div class="source-icon purple"><i class="bi bi-journal-text"></i></div>
+                        <div class="source-icon blue"><i class="bi bi-bookmark-check-fill"></i></div>
                         <div>
                             <div class="src-name">Apostila Anglo — Matemática</div>
                             <div class="src-detail">Módulo 4 · Páginas 140–145</div>
@@ -259,7 +259,7 @@
                         </div>
                     </div>
                     <div class="source-item">
-                        <div class="source-icon purple"><i class="bi bi-journal-text"></i></div>
+                        <div class="source-icon green"><i class="bi bi-bookmark-check-fill"></i></div>
                         <div>
                             <div class="src-name">Planejamento Semanal — Sem. 22</div>
                             <div class="src-detail">Aprovado pela coordenação em 06/06</div>
@@ -267,7 +267,7 @@
                         </div>
                     </div>
                     <div class="source-item">
-                        <div class="source-icon purple"><i class="bi bi-journal-text"></i></div>
+                        <div class="source-icon orange"><i class="bi bi-bookmark-check-fill"></i></div>
                         <div>
                             <div class="src-name">Conteúdo Ministrado em Sala</div>
                             <div class="src-detail">Registro de aulas: 09/06 a 13/06</div>
@@ -275,7 +275,7 @@
                         </div>
                     </div>
                     <div class="source-item">
-                        <div class="source-icon purple"><i class="bi bi-journal-text"></i></div>
+                        <div class="source-icon red"><i class="bi bi-bookmark-check-fill"></i></div>
                         <div>
                             <div class="src-name">BNCC — Competências</div>
                             <div class="src-detail">EF03MA05 · EF03MA07 · EF03MA12</div>
@@ -370,7 +370,7 @@
 </div>
 
 <div class="ai-overlay" id="ai-overlay">
-    <div class="ai-box">
+    <div class="ai-box-generate">
         <div class="ai-spinner"></div>
         <div class="ai-title"><i class="bi bi-lightning-charge-fill yellow"></i> IA Gerando Avaliação</div>
         <div class="ai-step" id="ai-step">Iniciando análise do planejamento...</div>
@@ -383,11 +383,11 @@
                 <span>Planejamento Sem. 22</span>
             </div>
             <div class="scan-chip" id="sc2">
-                <i class="bi bi-journal-text"></i>
+                <i class="bi bi-bookmark-check-fill"></i>
                 <span>Apostila Anglo</span>
             </div>
             <div class="scan-chip" id="sc3">
-                <i class="bi bi-journal-text"></i>
+                <i class="bi bi-bookmark-check-fill"></i>
                 <span>BNCC</span>
             </div>
             <div class="scan-chip" id="sc4">
@@ -548,7 +548,7 @@
     </div>
 </div>
 
-<div class="toast" id="toast">
+<div class="success-toast" id="toast">
     <i class="ti ti-circle-check"></i>
     <span>Avaliação gerada com rastreabilidade completa!</span>
 </div>
