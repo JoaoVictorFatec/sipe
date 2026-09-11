@@ -16,6 +16,7 @@
     --brown: #4A3833;
     --amber: #A16207;
     --blue: #0369a1;
+    --yellow: #fde047;
 
     --light-purple: #e0dcf8;
     --light-green: #DCFCE7;
@@ -823,9 +824,8 @@ body {
 }
 
 .modal-subtitle {
-    font-size: 14px;
-    font-weight: 800;
-    color: #1e293b;
+    font-size: calc(var(--smaller-text-size) - 2px);
+    font-weight: bold;
 }
 
 .modal-header {

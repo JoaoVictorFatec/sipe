@@ -398,35 +398,41 @@
     background: var(--purple);
 }
 
-.ai-box {
+.ai-box-suggestions {
     width: 100%;
     padding: 20px;
     border: 2px solid rgba(109, 40, 217, 0.2);
     border-radius: var(--radius);
-    background: linear-gradient(135deg, var(--white), var(--light-cotton) 100%);
+    background: var(--light-purple);
 }
 
-.ai-box-header {
+.ai-box-suggestions-header {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
 }
 
-.ai-box-header i {
+.ai-box-suggestions-header i {
     color: var(--purple);
 }
 
-.ai-box-title {
+.ai-box-suggestions-title {
     color: var(--dark-purple);
     font-size: calc(var(--smaller-text-size) - 2px);
     font-weight: bold;
 }
 
-.ai-box-description {
+.ai-box-suggestions-description {
     margin-bottom: 12px;
     color: var(--purple);
     font-size: calc(var(--smaller-text-size) - 4px);
+}
+
+.ai-box-suggestions button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .ai-suggestions {
