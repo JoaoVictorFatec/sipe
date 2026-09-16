@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Satisfy&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    Font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.landing-body {
+    background-color:#f4f6f9;
+    width: 100%;
+    height: 100vh;
+}
+
+.superior {
+    position: fixed;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    inset-inline: 0;           
+    margin: auto;       
+    width: fit-content;  
+    gap: 80px;
+    padding: 30px;
+}
+
+.superior > *:first-child {
+  grid-column: 1; 
+}
+
+.superior > *:last-child {
+  grid-column: 6;
+}
+
+
+.items {
+    display: grid;
+    justify-content: center;
+    font-size: 16px;
+    color: #7025db;
+}
+
+header {
+    background-color: #04031B;
+    height: 100px;
+}
+
+.buttom-join {
+    width: 80%;
+    padding: 10px 100px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -10px;
+    height: 45px;
+    border: none;
+    border-radius: 7px;
+    background-image: linear-gradient(90deg, #7025db, #6421c6);
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(91, 32, 190, 0.35);
+    transition: 0.2s;
+    color: white;
+    font-size: 14px;
+    transform: scale(0.90);
+}
+
+.buttom-join:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 12px rgba(91, 32, 190, 0.35);
+}
+
+.buttom-join:active {
+    transform: translateY();
+}
+
+.sipe-focus {
+    width: 341px;      
+    min-width: 280px;           
+    padding: 6px 16px;
+    background-color: #ede6f7;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: #7025db;
+}
+
+.logo {
+    margin-top: -20px;
+}
+
+.items {
+    text-decoration: none;
+}
+
+.center-information {
+    display: grid;
+    margin: 0;
+    gap: 20px;
+    grid-auto-flow: row;
+    justify-content: center;
+    font-size: 40px;
+    padding: 150px;
+}
+
+.title-sipe {
+    width: 20ch; 
+}
+
+.description {
+    font-size: 20px;
+    width: 45ch; 
+    line-height: 1.6;
+}
